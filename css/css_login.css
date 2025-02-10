@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* background-color: #f2f4f7; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+
+}
+.page{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+} 
+.left{
+    width: 40%
+}
+.left h1 {
+    color: #0866ff;
+    font-size: 55px;
+    font-weight: 700;
+}
+.left h3 {
+    font-size: 16px;
+}
+
+.right {
+    /* background-color: white; */
+    border: 1px solid #f2f4f7;
+    justify-self: center;
+    align-items: center;
+    margin-top: 3%;
+    width: 40%;
+    height: 300px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.login{
+    padding: auto;
+    margin: 10px;
+    content: center;
+    width: auto;
+    /* background-color: white; */
+}
+input {
+    width: 85%;
+    height: 20px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #f2f4f7;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: auto;
+    justify-content: center;
+}
+form button {
+    width: 93%;
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #f2f4f7;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #0866ff;
+    color: white;
+    outline: auto;
+}
+form a{
+    text-decoration: none;
+    display: flex;
+    color: #0866ff;
+    font-size: 14px;
+    margin: 10px;
+    justify-content: center;
+}
+ht {
+    width: 93%;
+    justify-content: center;
+}
+#newclass{
+    margin: 10px;
+    padding: auto;
+    border: 1px solid #f2f4f7;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #42b72a;
+    color: white;
+    outline: auto;
+    justify-content: center;
+    align-items: center;
+    margin-left: 75px;
+    height: 30px;
+}
+
+.lastone{
+    justify-content: center;
+    margin-top: 20px;
+
+}
+#create{
+    color: white;
+    margin-left: 20px;
+}
+#in{
+    font-size: 15px;
+}
+#out{
+    font-size: 13px;
+}
+a{
+    text-decoration: none;
+}
