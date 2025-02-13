@@ -97,8 +97,9 @@ ht {
     outline: auto;
     justify-content: center;
     align-items: center;
-    margin-left: 75px;
-    height: 30px;
+    margin-left: 59px;
+    height: 40px;
+    width: 60%;
 }
 
 .lastone{
