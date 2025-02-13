@@ -41,6 +41,12 @@ height: 80%;
         text-align: center;
     padding-bottom: 15px;
 }
+.top h2 {
+    font-size: 35px;
+}
+.top p {
+    font-size: 17px;
+}
 .top p {
     padding-top: 3px;
 }
@@ -54,17 +60,16 @@ height: 80%;
     width: 47.5%;
     height: 40px;
     margin-bottom: 20px;
-    font-size: 15px;
+    font-size: 20px;
 }
-.dob {
-    padding-bottom: 20px;
-}
+
 .date {
     display: flex;
     justify-content: space-evenly;
 }
 .dob p{
     margin-bottom: 2px;
+    font-size: 18px;
 }
 
 #day {
@@ -82,18 +87,18 @@ height: 80%;
     margin-bottom: 20px;
     margin-right:30px;
     padding-left: 10px;
-    font-size: 15px;
+    font-size: 17px;
 }
  #year{
     width: 30%;
     height: 40px;
     margin-bottom: 20px;
     padding-left: 10px;
-    font-size: 15px;
+    font-size: 17px;
 }
-gender {
+.gender {
     margin-bottom: 8px;
-    font-size: 15px;
+    font-size: 18px;
     color: #1c1e21;
 }
 
@@ -124,11 +129,11 @@ gender {
 
 }
 .email input {
-    width: 100%;
+    width: 98%;
     height: 40px;
     margin-bottom: 20px;
     padding-left: 10px;
-    font-size: 15px;
+    font-size: 17px;
 
 }
 
@@ -142,13 +147,28 @@ gender {
 
 }
 .pass input{
-    width: 100%;
+    width: 98%;
     height: 40px;
     margin-bottom: 20px;
     padding-left: 10px;
-    font-size: 15px;
+    font-size: 17px;
 }
+.repass{
+    margin-top: 20px;
+    border: 1px solid #767676;
+    width: 100%;
+    border-radius: 4px;
+    height: 40px;
+    margin-bottom: 20px;
 
+}
+.repass input{
+    width: 98%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    font-size: 17px;
+}
 .auth-actions {
     text-align: center;
 }
