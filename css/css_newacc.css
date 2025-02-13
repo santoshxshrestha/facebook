@@ -6,7 +6,9 @@
 .page{
     display: flex;
     width: 100%;
-    height:100vh;
+    /* width: auto; */
+    /* height:100vh; */
+    height: auto;
     justify-content: center;
 }
 .form{
@@ -18,11 +20,14 @@
 }
 .form h1 {
     color: #0866ff;
-    font-size: 60px;
+    font-size: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
+
 .form {
     width: 40%;
 }
@@ -86,72 +91,88 @@ height: 80%;
     padding-left: 10px;
     font-size: 15px;
 }
-.gender {
-    width: 47.5%;
+gender {
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #1c1e21;
+}
+
+.gendersec {
     display: flex;
-    flex-direction: row;
-    gap: 10px; /* Space between options */
+    gap: 14px;
+}
+
+.gendersec label {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid #767676;
+    border-radius: 4px;
+    display: flex;
     align-items: center;
-    font-family: Arial, sans-serif;
-    border: 1px solid #ccc;
+}
+
+.gendersec input[type="radio"] {
+    margin-right: 8px;
+}
+
+.email {
+    margin-top: 20px;
+    border: 1px solid #767676;
+    border-radius: 4px;
     width: 100%;
-    /* height: 40px; */
-    margin-bottom: 20px;
-    padding-left: 10px;
-    font-size: 15px;
+    height: 40px
 
 }
-
-.gender label {
-    width: 30%;
+.email input {
+    width: 100%;
     height: 40px;
     margin-bottom: 20px;
     padding-left: 10px;
     font-size: 15px;
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: all 0.2s ease-in-out;
-    background-color: #f8f9fa; /* Light gray background */
+
 }
 
-.gender label:hover {
-    background-color: #e2e6ea; /* Slightly darker on hover */
-}
+.pass{
+    margin-top: 20px;
+    border: 1px solid #767676;
+    width: 100%;
+    border-radius: 4px;
+    height: 40px;
+    margin-bottom: 20px;
 
-.gender input[type="radio"] {
-    width: 30%;
+}
+.pass input{
+    width: 100%;
     height: 40px;
     margin-bottom: 20px;
     padding-left: 10px;
     font-size: 15px;
-    margin-right: 5px;
-    appearance: none; /* Hide default radio */
-    border: 2px solid #1877f2; /* Facebook blue */
-    border-radius: 50%;
-    outline: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
 }
 
-.gender input[type="radio"]:checked::before {
-    width: 30%;
-    height: 40px;
-    margin-bottom: 20px;
-    padding-left: 10px;
-    font-size: 15px;
-    content: "";
-    background-color: #1877f2;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.auth-actions {
+    text-align: center;
 }
 
+.signup-btn {
+    margin-top:40px;
+    display: inline-block;
+    background: #00a400;
+    border-radius: 6px;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    text-decoration: none;
+    margin-bottom: 40px;
+}
+
+.login-link {
+    margin-top: 40px;
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 40000px;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
