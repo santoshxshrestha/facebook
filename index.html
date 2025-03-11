@@ -1,14 +1,46 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index page</title>
-</head>
+    <title>facebook - login and signup</title>
+    <link rel="stylesheet" href="../css/css_login.css" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  </head>
 
-<body>
-    <a href="pages/login_page.html">facebook login_page</a>
-</body>
+  <body>
+    <div class="page">
+      <div class="left">
+        <h1>facebook</h1>
+        <h3>Connect with friends and the world around you on Facebook.</h3>
+      </div>
 
+      <div class="right">
+        <div class="login">
+          <form>
+            <input type="text" placeholder="Email or phone number" />
+            <br />
+            <input type="password" placeholder="Password" />
+            <br />
+            <button>Log In</button>
+            <br />
+            <a href="there is nothing here ">Forgot password?</a>
+            <hr />
+          </form>
+          <button
+            id="newclass"
+            onclick="window.location.href='../pages/newacc.html'"
+          >
+            Create new account
+          </button>
+        </div>
+        <div class="lastone">
+          <a id="create" href="#"
+            ><span id="in">Create a Page</span>
+            <span id="out">for a celebrity, band or business.</span></a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
