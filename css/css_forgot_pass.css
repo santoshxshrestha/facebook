@@ -313,7 +313,6 @@
         text-decoration: underline;
       }
 
-      /* Responsive styles */
       @media (max-width: 900px) {
         .form {
           width: 50%;
