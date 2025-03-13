@@ -3,15 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forgot pasword</title>
-    <link rel="stylesheet" href="../css/css_forgot_pass.css" />
+    <title>Forgot Password | Facebook</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="../css/css_forgot_pass.css" />
   </head>
 
   <body>
@@ -23,11 +20,10 @@
               <p>facebook</p>
             </a>
           </div>
-
           <form class="form">
             <div class="data">
               <input type="text" placeholder="Email or phone" />
-              <input type="text" placeholder="Password" />
+              <input type="password" placeholder="Password" />
             </div>
             <div class="login">
               <button type="submit">
@@ -35,12 +31,68 @@
               </button>
             </div>
             <div class="forgot">
-              <a href="x">
+              <a href="#">
                 <p>Forgot Account?</p>
               </a>
             </div>
           </form>
         </nav>
+      </div>
+      <div class="account">
+        <div class="account-container">
+          <div class="account-header">
+            <h2>Find Your Account</h2>
+            <p>
+              Please enter your email address or mobile number to search for
+              your account.
+            </p>
+          </div>
+          <form class="account-form">
+            <div class="input-field">
+              <label for="email-phone">Email or Phone</label>
+              <input
+                type="text"
+                id="email-phone"
+                name="email-phone"
+                placeholder="Email or mobile number"
+              />
+              <div class="error-message">
+                Please enter a valid email or mobile number.
+              </div>
+            </div>
+
+            <div class="separator">
+              <div class="separator-line"></div>
+              <div class="separator-text">OR</div>
+              <div class="separator-line"></div>
+            </div>
+
+            <div class="social-options">
+              <div class="social-option">
+                <i class="fas fa-mobile-alt"></i>
+                <p>Get code via SMS</p>
+              </div>
+              <div class="social-option">
+                <i class="fas fa-key"></i>
+                <p>Use backup codes</p>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button type="button" class="cancel-btn">Cancel</button>
+              <button type="submit" class="search-btn">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer">
+        <p>
+          <a href="#">English (US)</a> · <a href="#">Español</a> ·
+          <a href="#">Français (France)</a> · <a href="#">中文(简体)</a> ·
+          <a href="#">العربية</a> ·
+          <a href="#">Português (Brasil)</a>
+        </p>
+        <p style="margin-top: 8px">Facebook © 2025</p>
       </div>
     </div>
   </body>

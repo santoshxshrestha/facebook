@@ -1,72 +1,358 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+      }
 
-.top nav {
-    border: 2px solid black;
-    display: flex;
-    top: 0;
-    justify-content: space-between;
-    height: 50px;
-    position: fixed;
-    width: 100vw;
-    background-color: white;
-    z-index: 1;
-}
+      body {
+        background-color: #f0f2f5;
+        color: #1c1e21;
+      }
 
-.top nav a{
-    text-decoration: none;
-}
-.top nav a p{
-    text-decoration: none;
-    color: #0866ff;
-    justify-content: center;
-}
-.logo{
-margin-top: 8px;
-    margin-left: 20px;
-    font-weight: 900;
-    font-size: 30px;
+      .main {
+        width: 100%;
+        min-height: 100vh;
+      }
 
-}
+      .top nav {
+        display: flex;
+        top: 0;
+        justify-content: space-between;
+        height: 56px;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        z-index: 1;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-.form{
-    width: 32%;
-    height: inherit;
-    display: flex;
-    justify-content: space-between;
+      .top nav a {
+        text-decoration: none;
+      }
 
-}
-.form .data input{
-    height: 43%;
-    width: 42%;
-    margin: 7px 0 0 10px;
-    padding: 5px;
-    font-size: 14px;
-}
+      .top nav a p {
+        text-decoration: none;
+        color: #1877f2;
+        justify-content: center;
+      }
 
-.forgot a p{
-    font-size: 15px;
-    margin: 13px 16px 0 2px;
-    font-weight: 900;
-}
+      .logo {
+        margin-top: 8px;
+        margin-left: 20px;
+        font-weight: 900;
+        font-size: 32px;
+      }
+
+      .form {
+        width: 32%;
+        height: inherit;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 15px;
+      }
+
+      .form .data {
+        display: flex;
+      }
+
+      .form .data input {
+        height: 36px;
+        margin: 0 8px;
+        padding: 0 10px;
+        font-size: 14px;
+        border: 1px solid #dddfe2;
+        border-radius: 4px;
+      }
+
+      .form .data input:focus {
+        outline: none;
+        border-color: #1877f2;
+        box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+      }
+
+      .forgot a p {
+        font-size: 13px;
+        margin: 0 10px;
+        color: #1877f2;
+        transition: color 0.2s;
+      }
+
+      .forgot a p:hover {
+        text-decoration: underline;
+      }
+
+      .form .login button {
+        background-color: #1877f2;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        height: 36px;
+        padding: 0 9px;
+        font-weight: bold;
+        font-size: 17px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      .form .login button:hover {
+        background-color: #166fe5;
+      }
+
+      .form .login button h1 {
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .account {
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: calc(100vh - 56px);
+      }
+
+      .account-container {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        max-width: 500px;
+        width: 100%;
+        padding: 24px;
+        margin: 0 16px;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .account-header {
+        padding-bottom: 24px;
+        border-bottom: 1px solid #dadde1;
+      }
+
+      .account-header h2 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #1c1e21;
+      }
+
+      .account-header p {
+        color: #606770;
+        font-size: 15px;
+        line-height: 1.4;
+      }
+
+      .account-form {
+        padding: 24px 0 16px;
+      }
+
+      .account-form .input-field {
+        margin-bottom: 20px;
+      }
+
+      .account-form label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 15px;
+        color: #606770;
+        font-weight: 500;
+      }
+
+      .account-form input {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid #dddfe2;
+        border-radius: 6px;
+        font-size: 16px;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .account-form input:focus {
+        outline: none;
+        border-color: #1877f2;
+        box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+      }
+
+      .account-form .error-message {
+        color: #f02849;
+        font-size: 13px;
+        margin-top: 4px;
+        display: none;
+      }
+
+      .account-form .input-field.error input {
+        border-color: #f02849;
+      }
+
+      .account-form .input-field.error .error-message {
+        display: block;
+      }
+
+      .account-form .buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+        margin-top: 24px;
+        border-top: 1px solid #dadde1;
+        padding-top: 16px;
+      }
+
+      .account-form .cancel-btn {
+        background-color: #e4e6eb;
+        color: #4b4f56;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 16px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      .account-form .cancel-btn:hover {
+        background-color: #d8dadf;
+      }
+
+      .account-form .search-btn {
+        background-color: #1877f2;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 16px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      .account-form .search-btn:hover {
+        background-color: #166fe5;
+      }
+
+      .account-form .search-btn:focus {
+        box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+      }
+
+      .account-form .separator {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+      }
+
+      .account-form .separator-line {
+        flex-grow: 1;
+        height: 1px;
+        background-color: #dadde1;
+      }
+
+      .account-form .separator-text {
+        padding: 0 10px;
+        color: #606770;
+        font-size: 13px;
+      }
+
+      .account-form .social-options {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+
+      .account-form .social-option {
+        display: flex;
+        align-items: center;
+        padding: 10px 12px;
+        border: 1px solid #dddfe2;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      .account-form .social-option:hover {
+        background-color: #f5f6f7;
+      }
+
+      .account-form .social-option i {
+        color: #1877f2;
+        font-size: 20px;
+        margin-right: 10px;
+      }
+
+      .account-form .social-option p {
+        font-size: 14px;
+        color: #1c1e21;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 20px;
+        color: #606770;
+        font-size: 13px;
+      }
+
+      .footer a {
+        color: #385898;
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 900px) {
+        .form {
+          width: 50%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .form {
+          display: none;
+        }
+
+        .logo {
+          margin: 8px auto;
+          text-align: center;
+        }
+
+        .account {
+          padding-top: 80px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .account-container {
+          padding: 16px;
+        }
+
+        .account-header h2 {
+          font-size: 20px;
+        }
+
+        .account-form .buttons {
+          flex-direction: column-reverse;
+          gap: 8px;
+        }
+
+        .account-form .cancel-btn,
+        .account-form .search-btn {
+          width: 100%;
+          padding: 12px 16px;
+        }
+      }
  
-.form .login button {
-    padding: 2px 2px 2px 6px;
-    background-color: #0866ff;
-    color: white;
-    border-radius: 10%;
-    height: 35px;
-    width: 67px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 6px 4px 0 4px;
-    font-size: 11px;
-}
-
-.form .login button:hover {
-    background-color: blue;
-}
