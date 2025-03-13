@@ -1,43 +1,292 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook - Log In or Sign Up</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Facebook - login or signup</title>
-  <link rel="stylesheet" href="./css/css_login.css" />
-  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-</head>
+      body {
+        background-color: #f0f2f5;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-<body>
-  <div class="page">
-    <div class="left">
-      <h1>facebook</h1>
-      <h3>Connect with friends and the world around you on Facebook.</h3>
+      .page {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 980px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .left {
+        width: 580px;
+        padding-right: 32px;
+      }
+
+      .left h1 {
+        color: #1877f2;
+        font-size: 56px;
+        font-weight: 900;
+        margin-bottom: 20px;
+      }
+
+      .left h3 {
+        font-size: 28px;
+        font-weight: normal;
+        line-height: 32px;
+        color: #1c1e21;
+      }
+
+      .right {
+        width: 396px;
+      }
+
+      .login {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow:
+          0 2px 4px rgba(0, 0, 0, 0.1),
+          0 8px 16px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 28px;
+      }
+
+      input {
+        width: 100%;
+        height: 52px;
+        padding: 14px 16px;
+        border: 1px solid #dddfe2;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        font-size: 17px;
+        outline: none;
+      }
+
+      input:focus {
+        border-color: #1877f2;
+        box-shadow: 0 0 0 2px #e7f3ff;
+      }
+
+      input::placeholder {
+        color: #90949c;
+      }
+
+      form button {
+        width: 100%;
+        height: 48px;
+        background-color: #1877f2;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 16px;
+        transition: background-color 0.3s;
+      }
+
+      form button:hover {
+        background-color: #166fe5;
+      }
+
+      form a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: #1877f2;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 16px 0;
+      }
+
+      form a:hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #dadde1;
+        margin: 20px 0;
+      }
+
+      #newclass {
+        background-color: #42b72a;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 17px;
+        font-weight: bold;
+        padding: 14px 16px;
+        cursor: pointer;
+        margin: 0 auto;
+        display: block;
+        transition: background-color 0.3s;
+      }
+
+      #newclass:hover {
+        background-color: #36a420;
+      }
+
+      .lastone {
+        text-align: center;
+        margin-top: 28px;
+      }
+
+      #create {
+        color: #1c1e21;
+        font-size: 14px;
+        display: inline-block;
+      }
+
+      #in {
+        font-weight: bold;
+      }
+
+      #out {
+        font-weight: normal;
+      }
+
+      #create:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        background-color: white;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        font-size: 12px;
+        color: #737373;
+      }
+
+      footer a {
+        color: #737373;
+        text-decoration: none;
+        margin: 0 8px;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      .language-selector {
+        margin-bottom: 10px;
+      }
+
+      .copyright {
+        margin-top: 10px;
+      }
+
+      /* Responsive design */
+      @media (max-width: 900px) {
+        .page {
+          flex-direction: column;
+          width: 100%;
+          padding: 20px;
+        }
+
+        .left {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 32px;
+          padding-right: 0;
+        }
+
+        .right {
+          width: 100%;
+          max-width: 396px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .left h1 {
+          font-size: 40px;
+        }
+
+        .left h3 {
+          font-size: 22px;
+        }
+
+        .login {
+          padding: 12px;
+        }
+
+        input {
+          height: 44px;
+          font-size: 16px;
+        }
+
+        form button {
+          height: 44px;
+          font-size: 18px;
+        }
+
+        #newclass {
+          font-size: 16px;
+          padding: 12px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="left">
+        <h1>facebook</h1>
+        <h3>Connect with friends and the world around you on Facebook.</h3>
+      </div>
+      <div class="right">
+        <div class="login">
+          <form>
+            <input type="text" placeholder="Email or phone number" />
+            <input type="password" placeholder="Password" />
+            <button type="submit">Log In</button>
+            <a href="./pages/forgot_pass.html">Forgot password?</a>
+            <hr />
+          </form>
+          <button
+            id="newclass"
+            onclick="window.location.href='./pages/newacc.html'"
+          >
+            Create new account
+          </button>
+        </div>
+        <div class="lastone">
+          <a id="create" href="#">
+            <span id="in">Create a Page</span>
+            <span id="out">for a celebrity, brand or business.</span>
+          </a>
+        </div>
+      </div>
     </div>
 
-    <div class="right">
-      <div class="login">
-        <form>
-          <input type="text" placeholder="Email or phone number" />
-          <br />
-          <input type="password" placeholder="Password" />
-          <br />
-          <button>Log In</button>
-          <br />
-          <a href="./pages/forgot_pass.html">Forgot password?</a>
-          <hr />
-        </form>
-        <button id="newclass" onclick="window.location.href='./pages/newacc.html'">
-          Create new account
-        </button>
+    <footer>
+      <div class="language-selector">
+        <a href="#">English (US)</a>
+        <a href="#">Español</a>
+        <a href="#">Français (France)</a>
+        <a href="#">中文(简体)</a>
+        <a href="#">العربية</a>
+        <a href="#">Português (Brasil)</a>
+        <a href="#">한국어</a>
+        <a href="#">Italiano</a>
       </div>
-      <div class="lastone">
-        <a id="create" href="#"><span id="in">Create a Page</span>
-          <span id="out">for a celebrity, band or business.</span></a>
-      </div>
-    </div>
-  </div>
-</body>
-
+      <hr style="width: 980px; margin: 8px auto" />
+      <div class="copyright">Facebook © 2025</div>
+    </footer>
+  </body>
 </html>
